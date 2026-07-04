@@ -1,0 +1,40 @@
+{
+  "info": {
+    "name": "SymbioAI API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth Register",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\n  \"email\": \"ava@symbioai.io\",\n  \"full_name\": \"Ava Chen\",\n  \"password\": \"Password123!\",\n  \"role\": \"Waste Producer\"\n}"},
+        "url": {"raw": "http://localhost:8000/api/auth/register", "host": ["http://localhost:8000"], "path": ["api", "auth", "register"]}
+      }
+    },
+    {
+      "name": "Auth Login",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\n  \"email\": \"ava@symbioai.io\",\n  \"password\": \"Password123!\"\n}"},
+        "url": {"raw": "http://localhost:8000/api/auth/login", "host": ["http://localhost:8000"], "path": ["api", "auth", "login"]}
+      }
+    },
+    {
+      "name": "Get Materials",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://localhost:8000/api/materials", "host": ["http://localhost:8000"], "path": ["api", "materials"]}
+      }
+    }
+    {
+      "name": "Get Dashboard Analytics",
+      "request": {
+        "method": "GET",
+        "url": {"raw": "http://localhost:8000/api/analytics/dashboard", "host": ["http://localhost:8000"], "path": ["api", "analytics", "dashboard"]}
+      }
+    }
+  ]
+}
