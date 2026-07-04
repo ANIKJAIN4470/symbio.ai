@@ -7,7 +7,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/symbio.ai/',
   server: {
     proxy: {
       '/api': {
